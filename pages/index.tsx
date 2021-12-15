@@ -84,17 +84,17 @@ const Home = () => {
     });
   }, [selectedImageIndex]);
 
-  // useEffect(() => {
-  //   const timerId = setTimeout(() => {
-  //     if (selectedImageIndex === images.length - 1) {
-  //       // 마지막 인덱스라면
-  //       setSelectedImageIndex(0);
-  //     } else {
-  //       setSelectedImageIndex(selectedImageIndex + 1);
-  //     }
-  //   }, 3000);
-  //   return () => clearTimeout(timerId);
-  // }, [selectedImageIndex]);
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      if (selectedImageIndex === images.length - 1) {
+        // 마지막 인덱스라면
+        setSelectedImageIndex(0);
+      } else {
+        setSelectedImageIndex(selectedImageIndex + 1);
+      }
+    }, 3000);
+    return () => clearTimeout(timerId);
+  }, [selectedImageIndex]);
 
   return (
     <Wrapper>
