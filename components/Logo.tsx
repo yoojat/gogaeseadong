@@ -4,8 +4,9 @@ import Image from 'next/image';
 import useScroll from '../hooks/useScroll';
 import Link from 'next/link';
 
-const LogoContainer = styled.div<{ scrollY: number }>`
-  background-color: ${(props) => (props.scrollY > 10 ? '#fff' : 'inherit')};
+const LogoContainer = styled.div<{ scrollY: number; innerWidth: number }>`
+  background-color: ${(props) =>
+    props.scrollY > 10 && props.innerWidth < 993 ? '#fff' : 'inherit'};
   position: fixed;
   width: 100%;
   @media screen and (min-width: 992px) {
@@ -35,15 +36,18 @@ const ImageConainer = styled.div`
 `;
 
 const Logo = () => {
-  const { scrollY } = useScroll();
+  const { scrollY, innerWidth } = useScroll();
+
   return (
-    <LogoContainer scrollY={scrollY}>
+    <LogoContainer scrollY={scrollY} innerWidth={innerWidth}>
       <Link href='/'>
         <a>
           <ImageConainer>
             <Image
               src={
-                scrollY > 0 && window.innerWidth < 993
+                innerWidth >= 993
+                  ? '/logo_black.png'
+                  : scrollY > 0
                   ? '/logo_black.png'
                   : '/logo_white.png'
               }

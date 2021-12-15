@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  z-index: 999;
 
   @media screen and (min-width: 992px) {
     height: 135px;
