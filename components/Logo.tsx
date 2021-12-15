@@ -46,7 +46,7 @@ const Logo = () => {
             <Image
               src={
                 innerWidth >= 993
-                  ? '/logo_black.png'
+                  ? '/logo_white.png'
                   : scrollY > 0
                   ? '/logo_black.png'
                   : '/logo_white.png'
