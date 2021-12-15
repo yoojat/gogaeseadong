@@ -54,6 +54,18 @@ const Page = styled.a<{ selected?: boolean }>`
   cursor: pointer;
 `;
 
+const Title = styled.div`
+  z-index: 998;
+  position: absolute;
+  right: 20px;
+  top: 60vh;
+  color: white;
+  letter-spacing: 4px;
+  word-spacing: 10px;
+  font-size: 16px;
+  line-height: 30px;
+`;
+
 const Home = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const imageContainerRefs = useRef<[HTMLDivElement | null | undefined]>([
@@ -72,17 +84,17 @@ const Home = () => {
     });
   }, [selectedImageIndex]);
 
-  useEffect(() => {
-    const timerId = setTimeout(() => {
-      if (selectedImageIndex === images.length - 1) {
-        // 마지막 인덱스라면
-        setSelectedImageIndex(0);
-      } else {
-        setSelectedImageIndex(selectedImageIndex + 1);
-      }
-    }, 3000);
-    return () => clearTimeout(timerId);
-  }, [selectedImageIndex]);
+  // useEffect(() => {
+  //   const timerId = setTimeout(() => {
+  //     if (selectedImageIndex === images.length - 1) {
+  //       // 마지막 인덱스라면
+  //       setSelectedImageIndex(0);
+  //     } else {
+  //       setSelectedImageIndex(selectedImageIndex + 1);
+  //     }
+  //   }, 3000);
+  //   return () => clearTimeout(timerId);
+  // }, [selectedImageIndex]);
 
   return (
     <Wrapper>
@@ -99,6 +111,11 @@ const Home = () => {
           );
         })}
       </ImageContainer>
+      <Title>
+        공간을
+        <br />
+        업사이클링하다
+      </Title>
 
       <PageContainer>
         {images.map((_, index) => (
