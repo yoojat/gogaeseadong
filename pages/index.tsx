@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-// import SimpleImageSlider from 'react-simple-image-slider';
 
 const images = [
   '/mainPhotos/1.JPG',

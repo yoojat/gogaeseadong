@@ -1,5 +1,6 @@
 import { NextComponentType } from 'next';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 const NavContainer = styled.nav`
@@ -61,46 +62,85 @@ const NavContainer = styled.nav`
   }
 `;
 
-const Navbar: NextComponentType = () => (
-  <NavContainer>
-    <ul>
-      <li>
-        <Link href='/'>
-          <a>
-            <div>프롤로그</div>
-          </a>
-        </Link>
-      </li>
-      <li>
-        <Link href='/photos'>
-          <a>
-            <div>공간도</div>
-          </a>
-        </Link>
-      </li>
-      <li>
-        <Link href='/photos'>
-          <a>
-            <div>즐길거리</div>
-          </a>
-        </Link>
-      </li>
-      <li>
-        <Link href='/photos'>
-          <a>
-            <div>예약안내</div>
-          </a>
-        </Link>
-      </li>
-      <li>
-        <Link href='/photos'>
-          <a>
-            <div>만든이</div>
-          </a>
-        </Link>
-      </li>
-    </ul>
-  </NavContainer>
-);
+const NavItem = styled.li<{ selected?: boolean }>`
+  color: #fff;
+  border: 1px solid #fff;
+  flex: 1;
+  text-align: center;
+  font-size: 13px;
+  &:first-child {
+    border-left: 0;
+  }
+  &:last-child {
+    border-right: 0;
+  }
+  & div {
+    transition: color 0.5s;
+    &:hover {
+      color: #444;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    background-color: ${(props) =>
+      props.selected ? 'rgba(51, 17, 8, 0.75)' : 'inherit'};
+  }
+
+  @media screen and (min-width: 992px) {
+    border: none;
+    font-size: 14px;
+    font-family: montserrat, Kakao, sans-serif;
+    transition: border-bottom 2s;
+    &::after {
+      ${(props) =>
+        props.selected &&
+        `content: attr(data-route);width: 10px;border-bottom: 1px solid #dedede; color: rgba(255, 255, 255, 0); position: relative; top: -20px;`}
+    }
+  }
+`;
+
+const Navbar: NextComponentType = () => {
+  const router = useRouter();
+  console.log(router.pathname);
+  return (
+    <NavContainer>
+      <ul>
+        <NavItem
+          data-route='프롤로그'
+          selected={router.pathname === '/prologue'}
+        >
+          <Link href='/prologue'>
+            <a>
+              <div>프롤로그</div>
+            </a>
+          </Link>
+        </NavItem>
+        <NavItem data-route='공간도' selected={router.pathname === '/space'}>
+          <Link href='/space'>
+            <a>
+              <div>공간도</div>
+            </a>
+          </Link>
+        </NavItem>
+        <NavItem data-route='즐길거리' selected={router.pathname === '/yoohee'}>
+          <Link href='/yoohee'>
+            <a>
+              <div>즐길거리</div>
+            </a>
+          </Link>
+        </NavItem>
+        <NavItem
+          data-route='예약안내'
+          selected={router.pathname === '/reservation'}
+        >
+          <Link href='/reservation'>
+            <a>
+              <div>예약안내</div>
+            </a>
+          </Link>
+        </NavItem>
+      </ul>
+    </NavContainer>
+  );
+};
 
 export default Navbar;
