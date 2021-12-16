@@ -48,7 +48,7 @@ const ChildrenWrapper = styled.div``;
 interface IDefaultContentProps {
   photoUrl: string;
   title: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const DefaultContentLayout = ({

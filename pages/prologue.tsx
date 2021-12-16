@@ -83,9 +83,10 @@ const Prologue = () => {
 </p>`;
   const photoUrl = '/mainPhotos/1.JPG';
   return (
-    <DefaultContentLayout title={title} photoUrl='/mainPhotos/1.JPG'>
-      <div>123</div>
-    </DefaultContentLayout>
+    <DefaultContentLayout
+      title={title}
+      photoUrl='/mainPhotos/1.JPG'
+    ></DefaultContentLayout>
   );
 };
 
