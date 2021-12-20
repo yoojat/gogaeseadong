@@ -1,6 +1,6 @@
 import DefaultContentLayout from '../components/defaultContent';
 
-const Reservation = () => {
+const Creator = () => {
   return (
     <DefaultContentLayout
       title='책을 읽고,<br>차를 마시며 보내는<br>독서를 위한 공간'
@@ -44,4 +44,4 @@ const Reservation = () => {
   );
 };
 
-export default Reservation;
+export default Creator;

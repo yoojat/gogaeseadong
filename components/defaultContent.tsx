@@ -4,6 +4,9 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   transition: background-image 3s;
+  @media screen and (min-width: 766px) {
+    height: 90vh;
+  }
 `;
 
 const ImageContainer = styled.div``;
@@ -17,12 +20,18 @@ const Img = styled.div<{ imgUrl: string }>`
   background-position: 50% 50%;
   transition: opacity 2s;
   position: absolute;
+  @media screen and (min-width: 766px) {
+    height: 90vh;
+  }
 `;
 
 const Title = styled.div`
   z-index: 998;
   position: absolute;
   top: 35vh;
+  @media screen and (min-width: 766px) {
+    top: 23vh;
+  }
   font-size: 13px;
   word-spacing: 5px;
   right: 2%;

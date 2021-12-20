@@ -114,13 +114,7 @@ const Navbar: NextComponentType = () => {
             </a>
           </Link>
         </NavItem>
-        <NavItem data-route='공간도' selected={router.pathname === '/space'}>
-          <Link href='/space'>
-            <a>
-              <div>공간도</div>
-            </a>
-          </Link>
-        </NavItem>
+
         <NavItem data-route='즐길거리' selected={router.pathname === '/yoohee'}>
           <Link href='/yoohee'>
             <a>
@@ -129,12 +123,19 @@ const Navbar: NextComponentType = () => {
           </Link>
         </NavItem>
         <NavItem
-          data-route='예약안내'
-          selected={router.pathname === '/reservation'}
+          data-route='이용문의'
+          selected={router.pathname === '/inquery'}
         >
-          <Link href='/reservation'>
+          <Link href='/inquery'>
             <a>
-              <div>예약안내</div>
+              <div>이용문의</div>
+            </a>
+          </Link>
+        </NavItem>
+        <NavItem data-route='만든이' selected={router.pathname === '/creator'}>
+          <Link href='/creator'>
+            <a>
+              <div>만든이</div>
             </a>
           </Link>
         </NavItem>
