@@ -49,19 +49,6 @@ function Photos({ posts, photos }: Props) {
 
 export default Photos;
 
-// export const getServerSideProps = async () => {
-//   // server side rendering
-//   const res = await fetch(
-//     'https://jsonplaceholder.typicode.com/posts?_start=0&_end=10'
-//   );
-//   const posts = await res.json();
-//   return {
-//     props: {
-//       posts,
-//     },
-//   };
-// };
-
 export const getStaticProps = async () => {
   // server side rendering
   const res = await fetch(

@@ -4,6 +4,7 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 import { useState } from 'react';
 import useScroll from '../hooks/useScroll';
+import Divider from '../components/Divider';
 
 const ContentContainer = styled.div`
   max-width: 1280px;
@@ -15,19 +16,6 @@ const ContentContainer = styled.div`
 
 const ContentItem = styled.div`
   text-align: center;
-`;
-
-const Divider = styled.hr<{ isBold?: boolean }>`
-  border: none;
-
-  border-top: ${(props) =>
-    props.isBold
-      ? '1px solid rgba(0, 0, 0,1)'
-      : '1px solid rgba(0, 0, 0, 0.05)'};
-  color: #333;
-  overflow: visible;
-  text-align: center;
-  height: 5px;
 `;
 
 const TextContainer = styled.div`
@@ -102,12 +90,18 @@ const Yoohee = () => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isPhotoPopUp, setIsPhotoPopUp] = useState(false);
   const { innerWidth } = useScroll();
+  const TitleSrc = () => (
+    <div>
+      책을 읽고,
+      <br />
+      차를 마시며 보내는
+      <br />
+      독서를 위한 공간
+    </div>
+  );
 
   return (
-    <DefaultContentLayout
-      title='책을 읽고,<br>차를 마시며 보내는<br>독서를 위한 공간'
-      photoUrl='/mainPhotos/2.JPG'
-    >
+    <DefaultContentLayout title={<TitleSrc />} photoUrl='/mainPhotos/2.JPG'>
       <ContentContainer>
         <Space />
         <Divider />

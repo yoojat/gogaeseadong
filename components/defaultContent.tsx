@@ -3,6 +3,8 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
+  max-height: 900px;
+
   transition: background-image 3s;
   @media screen and (min-width: 766px) {
     height: 90vh;
@@ -14,6 +16,7 @@ const ImageContainer = styled.div``;
 const Img = styled.div<{ imgUrl: string }>`
   width: 100%;
   height: 100vh;
+  max-height: 900px;
   background-image: url(${(props) => props.imgUrl});
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,7 +59,7 @@ const ChildrenWrapper = styled.div``;
 
 interface IDefaultContentProps {
   photoUrl: string;
-  title: string;
+  title: JSX.Element;
   children?: React.ReactNode;
 }
 
@@ -70,11 +73,7 @@ const DefaultContentLayout = ({
       <ImageContainer>
         <Img imgUrl={photoUrl} />
       </ImageContainer>
-      <Title
-        dangerouslySetInnerHTML={{
-          __html: title,
-        }}
-      />
+      <Title>{title}</Title>
     </Wrapper>
     <ChildrenWrapper>{children}</ChildrenWrapper>
   </>
