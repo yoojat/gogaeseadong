@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 import DefaultContentLayout from '../components/defaultContent';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import { useState } from 'react';
+import useScroll from '../hooks/useScroll';
 
 const ContentContainer = styled.div`
   max-width: 1280px;
@@ -49,15 +53,24 @@ const PhotoContainer = styled.div`
   display: flex;
   justify-content: right;
   flex-wrap: wrap;
-  width: 75%;
-
-  min-width: 700px;
+  width: 80%;
+  min-width: 600px;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    min-width: inherit;
+  }
+  max-width: 1100px;
+  margin-bottom: 30px;
 `;
 
-const PhotoItem = styled.div<{ photoUrl: string }>`
+const PhotoItem = styled.div<{ photoUrl: string; innerWidth: number }>`
   background-image: url(${(props) => props.photoUrl});
-  width: 25%;
-  height: 170px;
+  width: 30%;
+  height: 240px;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    height: ${(props) => (props.innerWidth * 6) / 10}px;
+  }
   background-size: cover;
   margin-left: 10px;
   margin-top: 10px;
@@ -65,9 +78,31 @@ const PhotoItem = styled.div<{ photoUrl: string }>`
   &:hover {
     opacity: 0.5;
   }
+
+  @media screen and (max-width: 992px) {
+    cursor: inherit;
+    &:hover {
+      opacity: inherit;
+    }
+  }
 `;
 
+// 992px
+
+const images = [
+  '/mainPhotos/1.JPG',
+  '/mainPhotos/2.JPG',
+  '/mainPhotos/3.JPG',
+  '/mainPhotos/4.JPG',
+  '/mainPhotos/5.JPG',
+  '/mainPhotos/6.JPG',
+];
+
 const Yoohee = () => {
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [isPhotoPopUp, setIsPhotoPopUp] = useState(false);
+  const { innerWidth } = useScroll();
+
   return (
     <DefaultContentLayout
       title='책을 읽고,<br>차를 마시며 보내는<br>독서를 위한 공간'
@@ -82,12 +117,19 @@ const Yoohee = () => {
         <ContentItem>
           <PhotoSection>
             <PhotoContainer>
-              <PhotoItem photoUrl={'/mainPhotos/2.JPG'} />
-              <PhotoItem photoUrl={'/mainPhotos/2.JPG'} />
-              <PhotoItem photoUrl={'/mainPhotos/2.JPG'} />
-              <PhotoItem photoUrl={'/mainPhotos/2.JPG'} />
-              <PhotoItem photoUrl={'/mainPhotos/2.JPG'} />
-              <PhotoItem photoUrl={'/mainPhotos/2.JPG'} />
+              {images.map((image, index) => (
+                <PhotoItem
+                  key={index}
+                  photoUrl={image}
+                  innerWidth={innerWidth}
+                  onClick={() => {
+                    if (innerWidth > 992) {
+                      setIsPhotoPopUp(true);
+                      setPhotoIndex(index);
+                    }
+                  }}
+                />
+              ))}
             </PhotoContainer>
           </PhotoSection>
         </ContentItem>
@@ -149,6 +191,20 @@ const Yoohee = () => {
           </p>
         </TextContainer>
       </ContentContainer>
+      {isPhotoPopUp && (
+        <Lightbox
+          mainSrc={images[photoIndex]}
+          nextSrc={images[(photoIndex + 1) % images.length]}
+          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+          onCloseRequest={() => setIsPhotoPopUp(false)}
+          onMovePrevRequest={() =>
+            setPhotoIndex((photoIndex + images.length - 1) % images.length)
+          }
+          onMoveNextRequest={() =>
+            setPhotoIndex((photoIndex + 1) % images.length)
+          }
+        />
+      )}
     </DefaultContentLayout>
   );
 };

@@ -38,7 +38,7 @@ const Title = styled.div`
 
   @media screen and (min-width: 992px) {
     right: 7%;
-    top: 35vh;
+    top: 25vh;
     font-size: 15px;
     word-spacing: 3px;
   }
