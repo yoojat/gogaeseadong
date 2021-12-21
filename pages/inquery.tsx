@@ -43,18 +43,14 @@ const ReservationContentRow = styled.div`
   line-height: 25px;
 `;
 
-const ContentTitle = styled.div``;
-
 const Inquery = () => {
   return (
     <DefaultContentLayout
       title={
         <>
-          책을 읽고,
+          소중한 공간의
           <br />
-          차를 마시며 보내는
-          <br />
-          독서를 위한 공간
+          특별한 주인공이 되어주세요.
         </>
       }
       photoUrl='/mainPhotos/3.JPG'
@@ -156,6 +152,15 @@ const Inquery = () => {
           </ReservationContentRow>
         </ReservationContentCol>
       </ReservationContentContainer>
+
+      <iframe
+        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d814.892894912934!2d129.09660176292584!3d35.217138962793804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356893bb7df20ff1%3A0x587edfd9dd9a1fb2!2z67aA7IKw6rSR7Jet7IucIOq4iOygleq1rCDshJzrj5nroZw5MeuyiOq4uCA3!5e0!3m2!1sko!2skr!4v1640074496992!5m2!1sko!2skr'
+        width='100%'
+        height='450'
+        style={{ border: 0 }}
+        allowFullScreen={false}
+        loading='lazy'
+      ></iframe>
     </DefaultContentLayout>
   );
 };

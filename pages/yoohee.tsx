@@ -92,11 +92,9 @@ const Yoohee = () => {
   const { innerWidth } = useScroll();
   const TitleSrc = () => (
     <div>
-      책을 읽고,
+      사랑하는 사람들과
       <br />
-      차를 마시며 보내는
-      <br />
-      독서를 위한 공간
+      이야기를 만들어가는 공간
     </div>
   );
 

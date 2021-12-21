@@ -31,22 +31,18 @@ const Img = styled.div<{ imgUrl: string }>`
 const Title = styled.div`
   z-index: 998;
   position: absolute;
-  top: 35vh;
-  @media screen and (min-width: 766px) {
-    top: 23vh;
-  }
+  top: 250px;
   font-size: 13px;
   word-spacing: 5px;
   right: 2%;
 
   @media screen and (min-width: 992px) {
     right: 7%;
-    top: 25vh;
     font-size: 15px;
     word-spacing: 3px;
   }
 
-  color: white;
+  color: rgb(255, 255, 255);
   letter-spacing: 4px;
   line-height: 30px;
   text-align: right;
@@ -59,7 +55,7 @@ const ChildrenWrapper = styled.div``;
 
 interface IDefaultContentProps {
   photoUrl: string;
-  title: JSX.Element;
+  title?: JSX.Element;
   children?: React.ReactNode;
 }
 
