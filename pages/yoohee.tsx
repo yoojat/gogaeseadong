@@ -83,7 +83,7 @@ const TextContentCol = styled.div`
   width: 100%;
   max-width: 600px;
   @media screen and (max-width: 992px) {
-    max-width: 800px;
+    max-width: inherit;
   }
 `;
 
