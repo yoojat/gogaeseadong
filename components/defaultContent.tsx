@@ -31,7 +31,7 @@ const Img = styled.div<{ imgUrl: string }>`
 const Title = styled.div`
   z-index: 998;
   position: absolute;
-  top: 250px;
+  top: 200px;
   font-size: 13px;
   word-spacing: 5px;
   right: 2%;

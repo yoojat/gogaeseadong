@@ -14,6 +14,10 @@ const ReservationButton = styled.button`
   border: none;
   font-weight: 800;
   padding: 10px 20px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 const Spacer = styled.div`
   margin-top: 70px;
