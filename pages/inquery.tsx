@@ -8,7 +8,7 @@ const ReserveationHeaderContainer = styled.div`
   margin-bottom: 30px;
 `;
 
-const ReservationButton = styled.button`
+const ReservationButton = styled.a`
   background-color: #f2dc02;
   color: ##371a1a;
   border: none;
@@ -65,7 +65,9 @@ const Inquery = () => {
         <Divider />
         <Spacer />
 
-        <ReservationButton>예약하기</ReservationButton>
+        <ReservationButton href='https://pf.kakao.com/_VCxnsb/chat'>
+          예약하기
+        </ReservationButton>
         <Spacer />
         <Divider />
       </ReserveationHeaderContainer>
