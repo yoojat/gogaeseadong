@@ -34,18 +34,19 @@ const Title = styled.div`
   position: absolute;
   top: 200px;
   font-size: 13px;
-  word-spacing: 5px;
+  word-spacing: 3px;
   right: 2%;
+  line-height: 20px;
 
   @media screen and (min-width: 992px) {
     right: 7%;
     font-size: 15px;
     word-spacing: 3px;
+    letter-spacing: 4px;
+    line-height: 30px;
   }
 
   color: rgb(255, 255, 255);
-  letter-spacing: 4px;
-  line-height: 30px;
   text-align: right;
   p {
     padding: 10px;
