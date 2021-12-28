@@ -27,7 +27,6 @@ const ReservationContentContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-weight: 300;
 `;
 const ReservationContentCol = styled.div`
   padding: 20px;

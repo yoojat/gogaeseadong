@@ -4,6 +4,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   max-height: 900px;
+  font-weight: 600;
 
   transition: background-image 3s;
   @media screen and (min-width: 766px) {
@@ -51,7 +52,9 @@ const Title = styled.div`
   }
 `;
 
-const ChildrenWrapper = styled.div``;
+const ChildrenWrapper = styled.div`
+  font-weight: 600;
+`;
 
 interface IDefaultContentProps {
   photoUrl: string;

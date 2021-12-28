@@ -28,7 +28,6 @@ const TextContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-weight: 300;
 `;
 
 const Space = styled.div`
