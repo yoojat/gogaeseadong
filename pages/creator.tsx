@@ -36,7 +36,7 @@ const Creator = () => {
           </CreatorRow>
           <CreatorRow>
             <CreatorColLeft>시공</CreatorColLeft>
-            <CreatorColRight>천홍범</CreatorColRight>
+            <CreatorColRight>천홍범, 황성부</CreatorColRight>
           </CreatorRow>
           <CreatorRow>
             <CreatorColLeft>스타일링</CreatorColLeft>
