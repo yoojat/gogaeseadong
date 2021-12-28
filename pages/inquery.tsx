@@ -47,6 +47,16 @@ const ReservationContentRow = styled.div`
   line-height: 25px;
 `;
 
+const Table = styled.table`
+  width: 100%;
+  * {
+    border: 1px solid black;
+  }
+  td {
+    padding: 5px;
+  }
+`;
+
 const Inquery = () => {
   return (
     <DefaultContentLayout
@@ -78,14 +88,52 @@ const Inquery = () => {
               <li>
                 · 이용 예약 확인 후, 문자로 비밀번호 등을 안내해 드립니다.
               </li>
+              <li>· 매일 12:00 ~ 23:00(최소 3시간 이용 가능)</li>
               <li>
-                · 매일 12:00 ~ 21:00 (최소 3시간 이용 가능) 부산 금정구 서동로
-                91번길 7, 1층 - 인근 공영 주차장과 갓길 주차가 가능합니다.
+                부산 금정구 서동로 91번길 7, 1층 - 인근 공영 주차장과 갓길
+                주차가 가능합니다.
               </li>
               <li>
-                · 평일(월~목) 1시간 - 9,900원(2인 기준) 주말(금~일) 1시간 -
-                12,000원(2인 기준) 인원 추가 - 시간에 상관없이 1인 7,000원의
-                추가요금을 받고 있습니다.
+                <div style={{ paddingTop: '20px' }}>
+                  베이킹 도구를 사용하지 않을 경우
+                </div>
+                <div>
+                  <Table>
+                    <tr>
+                      <td>평일(월~목) 1시간</td>
+                      <td>10,000원(2인 기준)</td>
+                    </tr>
+                    <tr>
+                      <td>주말(금~일) 1시간</td>
+                      <td>13,000원(2인 기준)</td>
+                    </tr>
+                  </Table>
+                  <div>
+                    *인원 추가 - 시간에 상관없이 1인 7,000원의 요금을 받고
+                    있습니다.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div style={{ paddingTop: '20px' }}>
+                  베이킹 도구를 사용할 경우
+                </div>
+                <div>
+                  <Table>
+                    <tr>
+                      <td>평일(월~목) 1시간</td>
+                      <td>14,000원(2인 기준)</td>
+                    </tr>
+                    <tr>
+                      <td>주말(금~일) 1시간</td>
+                      <td>17,000원(2인 기준)</td>
+                    </tr>
+                  </Table>
+                  <div>
+                    *인원 추가 - 시간에 상관없이 1인 10,000원의 요금을 받고
+                    있습니다.
+                  </div>
+                </div>
               </li>
             </ul>
           </ReservationContentRow>
