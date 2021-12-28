@@ -1,4 +1,5 @@
 const config = {
+  canonical: 'https://www.gogaeseodong.ga/',
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
@@ -13,7 +14,6 @@ const config = {
       type: 'image/jpeg',
     },
     description: '공간을 업사이클링 하다',
-    canonical: 'https://www.gogaeseodong.ga/',
   },
 };
 
