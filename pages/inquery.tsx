@@ -138,7 +138,8 @@ const Inquery = () => {
           </ReservationContentRow>
           <ReservationContentRow>
             <ul>
-              <li>· 예약 안내 예약 신청 후 계좌이체 부탁드립니다.</li>
+              <li>예약 안내</li>
+              <li>· 예약 신청 후 계좌이체 부탁드립니다.</li>
               <li>
                 · 계좌이체 결제시 예약신청 후 12시간 이내에 입금되지 않을 경우,
                 예약이 취소됩니다.
@@ -164,12 +165,11 @@ const Inquery = () => {
         <ReservationContentCol>
           <ReservationContentRow>
             <ul>
+              <li>환불 규정</li>
+              <li>· 환불 시 아래의 기준일에 따른 환불 금액을 드립니다.</li>
               <li>
-                · 환불 규정 환불 시 아래의 기준일에 따른 환불 금액을 드립니다.
-              </li>
-              <li>
-                · 이용 10일전 - 총 결제금액의 100% 환불 이용 5일전 - 총
-                결제금액의 50% 환불 이용 3일전 - 변경/환불 불가
+                · 이용 10일전 - 총 결제금액의 100% 환불 / 이용 5일전 - 총
+                결제금액의 50% / 환불 이용 5일이내 - 환불 불가
               </li>
             </ul>
           </ReservationContentRow>
