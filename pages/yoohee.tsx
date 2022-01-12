@@ -120,7 +120,11 @@ const Yoohee = () => {
   );
 
   return (
-    <DefaultContentLayout title={<TitleSrc />} photoUrl='/mainPhotos/2.JPG'>
+    <DefaultContentLayout
+      title={<TitleSrc />}
+      photoUrl='/mainPhotos/2.JPG'
+      seoTitle='즐길거리'
+    >
       <ContentContainer>
         <Space />
         <Divider />

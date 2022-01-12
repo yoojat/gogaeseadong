@@ -27,7 +27,7 @@ const CreatorColRight = styled.div`
 
 const Creator = () => {
   return (
-    <DefaultContentLayout photoUrl='/mainPhotos/3.JPG'>
+    <DefaultContentLayout photoUrl='/mainPhotos/3.JPG' seoTitle='만든이'>
       <>
         <CreatorsContainer>
           <CreatorRow>

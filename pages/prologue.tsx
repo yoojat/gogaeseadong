@@ -89,6 +89,7 @@ const Prologue = () => {
     <DefaultContentLayout
       title={<TitleSrc />}
       photoUrl='/mainPhotos/1.JPG'
+      seoTitle='프롤로그'
     ></DefaultContentLayout>
   );
 };

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Seo from './Seo';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -61,14 +62,17 @@ interface IDefaultContentProps {
   photoUrl: string;
   title?: JSX.Element;
   children?: React.ReactNode;
+  seoTitle?: string;
 }
 
 const DefaultContentLayout = ({
   photoUrl,
   title,
   children,
+  seoTitle,
 }: IDefaultContentProps) => (
   <>
+    {seoTitle && <Seo title={seoTitle} />}
     <Wrapper>
       <ImageContainer>
         <Img imgUrl={photoUrl} />

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import Seo from '../components/Seo';
 
 const images = [
   '/mainPhotos/1.JPG',
@@ -96,38 +97,41 @@ const Home = () => {
   }, [selectedImageIndex]);
 
   return (
-    <Wrapper>
-      <ImageContainer>
-        {images.map((image, index) => {
-          return (
-            <Img
-              key={index}
-              imgUrl={image}
-              ref={(element) => {
-                imageContainerRefs.current[index] = element;
-              }}
-            />
-          );
-        })}
-      </ImageContainer>
-      <Title>
-        공간을
-        <br />
-        업사이클링하다
-      </Title>
+    <div>
+      <Seo title='Home' />
+      <Wrapper>
+        <ImageContainer>
+          {images.map((image, index) => {
+            return (
+              <Img
+                key={index}
+                imgUrl={image}
+                ref={(element) => {
+                  imageContainerRefs.current[index] = element;
+                }}
+              />
+            );
+          })}
+        </ImageContainer>
+        <Title>
+          공간을
+          <br />
+          업사이클링하다
+        </Title>
 
-      <PageContainer>
-        {images.map((_, index) => (
-          <Page
-            selected={selectedImageIndex === index}
-            onClick={() => setSelectedImageIndex(index)}
-            key={index}
-          >
-            {index + 1}
-          </Page>
-        ))}
-      </PageContainer>
-    </Wrapper>
+        <PageContainer>
+          {images.map((_, index) => (
+            <Page
+              selected={selectedImageIndex === index}
+              onClick={() => setSelectedImageIndex(index)}
+              key={index}
+            >
+              {index + 1}
+            </Page>
+          ))}
+        </PageContainer>
+      </Wrapper>
+    </div>
   );
 };
 

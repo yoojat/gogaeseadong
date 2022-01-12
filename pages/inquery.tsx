@@ -67,6 +67,7 @@ const Inquery = () => {
         </>
       }
       photoUrl='/mainPhotos/3.JPG'
+      seoTitle='문의'
     >
       <Spacer />
 
