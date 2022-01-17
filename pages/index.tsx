@@ -98,7 +98,7 @@ const Home = () => {
 
   return (
     <div>
-      <Seo title='Home' />
+      <Seo title='' />
       <Wrapper>
         <ImageContainer>
           {images.map((image, index) => {
