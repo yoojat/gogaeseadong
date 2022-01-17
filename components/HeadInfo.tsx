@@ -24,10 +24,7 @@ const HeadInfo = ({
       <meta property='og:type' content='website' />
       <meta property='og:title' content='고개 서동' />
       <meta property='og:image' content='/logo_black.png' />
-      <meta
-        property='og:url'
-        content='https://https://gogaeseodong.vercel.app/'
-      />
+      <meta property='og:url' content='https://gogaeseodong.vercel.app/' />
       <link rel='icon' href='/favicon.ico' />
     </Head>
   );
