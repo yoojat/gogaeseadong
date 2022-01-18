@@ -24,7 +24,7 @@ const Img = styled.div<{ imgUrl: string }>`
 const Title = styled.div`
   z-index: 998;
   position: absolute;
-  top: 35vh;
+  top: 33vh;
   font-size: 13px;
   word-spacing: 5px;
   right: 2%;
@@ -38,7 +38,7 @@ const Title = styled.div`
 
   color: white;
   letter-spacing: 4px;
-  line-height: 30px;
+  line-height: 20px;
   text-align: right;
   p {
     padding: 10px;
