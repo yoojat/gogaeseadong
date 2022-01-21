@@ -8,17 +8,35 @@ const ReserveationHeaderContainer = styled.div`
   margin-bottom: 30px;
 `;
 
-const ReservationButton = styled.a`
+const KakaoButton = styled.a`
   background-color: #f2dc02;
-  color: ##371a1a;
+  color: #371a1a;
   border: none;
   font-weight: 800;
-  padding: 10px 20px;
   cursor: pointer;
   &:hover {
     opacity: 0.7;
   }
+  margin: 10px;
+  width: 160px;
+  display: inline-block;
+  padding: 10px;
 `;
+const NaverButton = styled.a`
+  background-color: #02c75a;
+  color: white;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+  margin: 10px;
+  width: 160px;
+  display: inline-block;
+  padding: 10px;
+`;
+
 const Spacer = styled.div`
   margin-top: 70px;
 `;
@@ -76,9 +94,15 @@ const Inquery = () => {
         <Divider />
         <Spacer />
 
-        <ReservationButton href='https://pf.kakao.com/_VCxnsb/chat'>
-          예약하기
-        </ReservationButton>
+        <KakaoButton target={'_blank'} href='https://pf.kakao.com/_VCxnsb/chat'>
+          카카오톡 문의
+        </KakaoButton>
+        <NaverButton
+          target={'_blank'}
+          href='https://m.booking.naver.com/booking/10/bizes/638724?theme=place&entry=pll&area=pll'
+        >
+          네이버 예약
+        </NaverButton>
         <Spacer />
         <Divider />
       </ReserveationHeaderContainer>

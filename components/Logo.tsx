@@ -48,7 +48,7 @@ const Logo = () => {
                 innerWidth >= 993
                   ? '/logo_white.png'
                   : scrollY > 0
-                  ? '/logo_black.png'
+                  ? '/logo_brown.png'
                   : '/logo_white.png'
               }
               alt='logo'
