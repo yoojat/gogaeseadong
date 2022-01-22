@@ -46,10 +46,10 @@ const Logo = () => {
             <Image
               src={
                 innerWidth >= 993
-                  ? '/logo_white.png'
+                  ? '/logo_white2.png'
                   : scrollY > 0
-                  ? '/logo_brown.png'
-                  : '/logo_white.png'
+                  ? '/logo_brown2.png'
+                  : '/logo_white2.png'
               }
               alt='logo'
               layout='responsive'

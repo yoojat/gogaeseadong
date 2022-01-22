@@ -20,7 +20,7 @@ const Footer: NextComponentType = () => {
           <Image
             layout='fill'
             objectFit={'contain'}
-            src={'/logo_brown.png'}
+            src={'/logo_brown2.png'}
             alt={'logo'}
           />
         </div>
