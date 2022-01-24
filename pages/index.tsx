@@ -57,7 +57,7 @@ const Page = styled.a<{ selected?: boolean }>`
 const Title = styled.div`
   z-index: 998;
   position: absolute;
-  right: 20px;
+  right: 15%;
   top: 60vh;
   color: white;
   letter-spacing: 4px;

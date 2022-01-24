@@ -25,7 +25,7 @@ const ImageConainer = styled.div`
       margin-left: 15px;
     }
 
-    margin-top: 0;
+    margin-top: 20px;
     & li {
       border: none;
     }
