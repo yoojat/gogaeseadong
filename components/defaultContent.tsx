@@ -48,6 +48,7 @@ const Title = styled.div`
   }
 
   color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px #333;
   text-align: right;
   p {
     padding: 10px;

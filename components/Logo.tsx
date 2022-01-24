@@ -1,4 +1,3 @@
-import Navbar from './Navbar';
 import styled from 'styled-components';
 import Image from 'next/image';
 import useScroll from '../hooks/useScroll';

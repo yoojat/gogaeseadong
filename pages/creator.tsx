@@ -9,6 +9,7 @@ const CreatorsContainer = styled.div`
   width: 100%;
   color: white;
   font-weight: 600;
+  text-shadow: 2px 2px 5px #333;
 `;
 const CreatorRow = styled.div`
   display: flex;

@@ -76,6 +76,7 @@ const NavItem = styled.li<{ selected?: boolean }>`
   }
   & div {
     transition: color 0.5s;
+    text-shadow: 1px 1px 5px #111;
     &:hover {
       color: #444;
     }
@@ -100,7 +101,6 @@ const NavItem = styled.li<{ selected?: boolean }>`
 
 const Navbar: NextComponentType = () => {
   const router = useRouter();
-  console.log(router.pathname);
   return (
     <NavContainer>
       <ul>
