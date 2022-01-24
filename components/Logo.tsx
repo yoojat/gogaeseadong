@@ -21,7 +21,7 @@ const ImageConainer = styled.div`
   // 데스크탑 큰화면
   @media screen and (min-width: 992px) {
      {
-      width: 164px;
+      width: 100px;
       margin-left: 15px;
     }
 
