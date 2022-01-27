@@ -7,8 +7,8 @@ interface Props {
 }
 
 const HeadInfo = ({
-  title = '고개서동',
-  keyword = '공유공간, 모임공간, 파티, 쿠킹클래스, 이벤트, 커플, 가족',
+  title = '공유주방 고개서동',
+  keyword = '공유주방, 공유공간, 모임공간, 파티, 쿠킹클래스, 이벤트, 커플, 가족',
   contents = '공간을 업사이클링하다',
 }: Props) => {
   return (
@@ -22,7 +22,7 @@ const HeadInfo = ({
       <meta content={contents} />
       <meta name='description' content={contents} />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='고개서동' />
+      <meta property='og:title' content='공유주방 고개서동' />
       <meta property='og:image' content='/mainPhotos/2.JPG' />
       <meta property='og:url' content='https://gogaeseodong.vercel.app/' />
       <link rel='icon' href='/favicon.ico' />
