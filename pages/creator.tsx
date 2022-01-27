@@ -5,7 +5,7 @@ const CreatorsContainer = styled.div`
   font-size: 13px;
   position: absolute;
   left: 0;
-  top: 300px;
+  top: 200px;
   width: 100%;
   color: white;
   font-weight: 600;
