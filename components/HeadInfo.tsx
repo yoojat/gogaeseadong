@@ -23,7 +23,10 @@ const HeadInfo = ({
       <meta content={contents} />
       <meta name='description' content={contents} />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='공유주방 고개서동' />
+      <meta
+        property='og:title'
+        content='부산 공유주방, 공간대여, 모임공간, 커뮤니티 공간 - 고개서동'
+      />
       <meta property='og:image' content='/mainPhotos/2.JPG' />
       <meta property='og:url' content='https://gogaeseodong.vercel.app/' />
       <link rel='icon' href='/favicon.ico' />

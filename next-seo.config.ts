@@ -4,8 +4,8 @@ const config = {
     type: 'website',
     locale: 'ko_KR',
     url: 'https://gogaeseodong.vercel.app/',
-    site_name: '공유주방 고개서동',
-    title: '공유주방 고개서동',
+    site_name: '부산 공유주방, 공간대여, 모임공간, 커뮤니티 공간 - 고개서동',
+    title: '부산 공유주방, 공간대여, 모임공간, 커뮤니티 공간 - 고개서동',
     image: {
       url: 'https://gogaeseodong.vercel.app/mainPhotos/2.JPG',
       width: 800,
