@@ -25,7 +25,7 @@ const NavContainer = styled.nav`
     & div {
       transition: color 0.5s;
       &:hover {
-        color: #444;
+        background-color: rgba(246, 139, 31, 0.5);
       }
     }
   }
@@ -78,7 +78,7 @@ const NavItem = styled.li<{ selected?: boolean }>`
     transition: color 0.5s;
     text-shadow: 1px 1px 5px #111;
     &:hover {
-      color: #444;
+      /* color: #444; */
     }
   }
   @media screen and (max-width: 992px) {

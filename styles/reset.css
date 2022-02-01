@@ -100,10 +100,10 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
-  font-family: Droid Sans ',' NanumSquare ',' Apple SD Gothic Neo ', ' Malgun
-    Gothic ',' Nanum Gothic ', ' Noto Sans ',' sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 ol,
 ul {
