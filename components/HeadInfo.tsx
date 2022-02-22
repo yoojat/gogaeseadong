@@ -7,9 +7,9 @@ interface Props {
 }
 
 const HeadInfo = ({
-  title = '부산 공유주방, 공간대여, 모임공간, 커뮤니티 공간 - 고개서동',
-  keyword = '부산공유주방, 금정구 공유주방, 부산모임공간, 금정구 모임공간, 부산공간대여, 금정구 공간대여, 부산베이킹공방, 금정구 베이킹공방, 부상쿠킹공방, 금정구 쿠킹공방, 부산키친공간대여, 부산키친공간, 금정구 키친공간대여, 부산파티룸, 금정구 파티룸, 부산전시공간, 금정구 전시공간',
-  contents = '부산 금정구 서동에 위치한 공유주방 겸 모임공간입니다. 사랑하는 이들과 함께 음식을 해먹으며, 소소한 추억을 나누시기 바랍니다.',
+  title = '고개서동 - 부산공유주방',
+  keyword = '부산공유주방, 부산모임공간, 부산베이킹공방, 부산공간대여, 부산파티룸, 부산장소대여, 부산대공유주방, 부산대장소대여, 부산대모임공간',
+  contents = '사랑하는 사람들과 오붓한 식사시간을 가지는 부산공유주방입니다. 부산베이킹공방과 부산모임공간을 병행하고 있습니다.',
 }: Props) => {
   return (
     <Head>
@@ -23,12 +23,23 @@ const HeadInfo = ({
       <meta content={contents} />
       <meta name='description' content={contents} />
       <meta property='og:type' content='website' />
-      <meta
-        property='og:title'
-        content='부산 공유주방, 공간대여, 모임공간, 커뮤니티 공간 - 고개서동'
-      />
+      <meta property='og:site_name' content='고개서동' />
+      <meta property='og:title' content={title} />
+      <meta property='og:description' content={contents} />
       <meta property='og:image' content='/mainPhotos/2.JPG' />
       <meta property='og:url' content='https://gogaeseodong.vercel.app/' />
+      <meta property='al:ios:url' content='applinks://docs' />
+      <meta property='al:ios:app_store_id' content='12345' />
+      <meta property='al:ios:app_name' content='App Links' />
+      <meta property='al:android:url' content='applinks://docs' />
+      <meta property='al:android:app_name' content='App Links' />
+      <meta property='al:android:package' content='org.applinks' />
+      <link rel='canonical' href='https://gogaeseodong.vercel.app/' />
+
+      <meta
+        property='al:web:url'
+        content='http://applinks.org/documentation'
+      ></meta>
       <link rel='icon' href='/favicon.ico' />
     </Head>
   );
