@@ -28,6 +28,22 @@ const Footer: NextComponentType = () => {
           부산광역시 금정구 서동로 91번길 7
         </div>
       </FooterContentContainer>
+      <div
+        style={{
+          marginTop: '10px',
+          paddingBottom: '10px',
+          marginLeft: '15px',
+          lineHeight: '1.3',
+          fontSize: '12px',
+        }}
+      >
+        (주)크리플레이 ㅣ COPYRIGHT 2021.
+        <br />
+        CREPLAY ALL RIGHT RESERVED
+        <br /> 대표자 : 송병근
+        <br />
+        {/* 사업자 등록 번호 : 617-86-24973 */}
+      </div>
     </ContainerFooter>
   );
 };
