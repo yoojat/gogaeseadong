@@ -7,7 +7,7 @@ interface Props {
 }
 
 const HeadInfo = ({
-  title = '고개서동 - 부산공유주방',
+  title = '서동부엌 - 부산공유주방',
   keyword = '부산공유주방, 부산모임공간, 부산베이킹공방, 부산공간대여, 부산파티룸, 부산장소대여, 부산대공유주방, 부산대장소대여, 부산대모임공간',
   contents = '사랑하는 사람들과 오붓한 식사시간을 가지는 부산공유주방입니다. 부산베이킹공방과 부산모임공간을 병행하고 있습니다.',
 }: Props) => {
@@ -23,7 +23,7 @@ const HeadInfo = ({
       <meta content={contents} />
       <meta name='description' content={contents} />
       <meta property='og:type' content='website' />
-      <meta property='og:site_name' content='고개서동' />
+      <meta property='og:site_name' content='서동부엌' />
       <meta property='og:title' content={title} />
       <meta property='og:description' content={contents} />
       <meta property='og:image' content='/mainPhotos/2.JPG' />
